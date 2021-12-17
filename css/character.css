@@ -1,0 +1,65 @@
+@keyframes ringAni {
+  100% {
+    transform: translateY(25px);
+  }
+}
+
+.character {
+  position: relative;
+  left: 40%;
+  bottom: 40%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  animation: ringAni 0.6s ease-in-out alternate infinite;
+  perspective: 1000px;
+}
+
+.head {
+  z-index: 2;
+  position: absolute;
+  border-left: 7rem solid transparent;
+  border-right: 7rem solid transparent;
+  border-radius: 60%;
+}
+
+.body {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  width: 7.5rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #f7ebb7;
+  content: "";
+}
+
+.direction {
+  position: absolute;
+  top: 30px;
+  left: 70px;
+  border-left: 2.5rem solid transparent;
+  border-right: 2.5rem solid transparent;
+  border-bottom: 2.5rem solid black;
+  content: "";
+  z-index: 2;
+}
+
+.eye {
+  position: absolute;
+  top: 96.5px;
+  left: 84px;
+  width: 1rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.eye:before {
+  position: absolute;
+  left: 32px;
+  width: 1rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: black;
+  content: "";
+}
