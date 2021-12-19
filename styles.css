@@ -2,9 +2,12 @@
 @import "reset.css";
 /* css */
 @import "css/character.css";
+@import "css/page.css";
 
 body {
+  height: 500vw;
   font-family: "Gloria Hallelujah", cursive;
+  -webkit-overflow-scrolling: touch;
 }
 
 .world {
@@ -30,6 +33,6 @@ body {
 .house {
   width: 100vw;
   height: 100vh;
-  transform: translateZ(-300vw);
+  transform: translateZ(-200vw);
   transform-style: preserve-3d;
 }

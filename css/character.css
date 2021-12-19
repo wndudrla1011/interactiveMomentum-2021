@@ -14,6 +14,14 @@
   perspective: 1000px;
 }
 
+.character[data-direction="forward"] {
+  transform: rotateZ(180deg);
+}
+
+.character[data-direction="backward"] {
+  transform: rotateZ(0deg);
+}
+
 .head {
   z-index: 2;
   position: absolute;

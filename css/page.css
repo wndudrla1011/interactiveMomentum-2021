@@ -1,0 +1,26 @@
+.page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://post-phinf.pstatic.net/MjAxODEyMjBfMTYy/MDAxNTQ1Mjg2MTY2MTg4.EMsVh-XLO8k1jOkWNcZrrjXfhTlKX3Zig2yUYpwQozMg.AKIGpGLH9oHUoInx36ZAesEA6sXuzLt-aS6sDJ2Nfncg.JPEG/96f46544fe3de03b2eafe36ce1c35c7f.jpg?type=w1200");
+}
+
+.page-bottom {
+  height: 1000vh;
+  top: -400vh;
+  transform: rotateX(90deg);
+}
+
+.page_front-login {
+  transform: translateZ(70vw);
+}
+
+.page_front-main {
+  transform: translateZ(-100vw);
+}
+
+.page_front-notepad {
+  transform: translateZ(-240vw);
+}
