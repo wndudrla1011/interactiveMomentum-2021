@@ -1,4 +1,4 @@
-@keyframes ringAni {
+@keyframes moving {
   100% {
     transform: translateY(25px);
   }
@@ -10,8 +10,11 @@
   bottom: 40%;
   transform-style: preserve-3d;
   transform-origin: center center;
-  /* animation: ringAni 0.6s ease-in-out alternate infinite; */
   perspective: 1000px;
+}
+
+.character.moving {
+  animation: moving 0.7s ease-in-out alternate infinite;
 }
 
 .head {
@@ -30,7 +33,6 @@
   height: 8rem;
   border-radius: 50%;
   background-color: #f7ebb7;
-  content: "";
 }
 
 .character-side {
@@ -44,22 +46,6 @@
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-
-.character.body[data-direction="forward"] {
-  transform: rotateY(180deg);
-}
-
-.character.body[data-direction="backward"] {
-  transform: rotateY(0deg);
-}
-
-.front-side {
-  z-index: 1;
-}
-
-.back-side {
-  transform: rotateY(180deg);
 }
 
 .guide {
@@ -99,4 +85,18 @@
   border-radius: 50%;
   background-color: black;
   content: "";
+}
+
+.character.eye[data-direction="forward"] {
+}
+
+.character.eye[data-direction="backward"] {
+}
+
+.eye[data-direction="forward"] {
+  visibility: hidden;
+}
+
+.eye[data-direction="backward"] {
+  visibility: visible;
 }
