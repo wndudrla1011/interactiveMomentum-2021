@@ -1,20 +1,23 @@
-@keyframes moving {
+@keyframes movingY {
+  100% {
+    transform: translateY(25px);
+  }
+}
+
+@keyframes movingX {
   100% {
     transform: translateY(25px);
   }
 }
 
 .character {
-  position: relative;
-  left: 40%;
-  bottom: 40%;
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  width: 10vw;
+  height: 15vw;
   transform-style: preserve-3d;
   transform-origin: center center;
-  perspective: 1000px;
-}
-
-.character.moving {
-  animation: moving 0.7s ease-in-out alternate infinite;
 }
 
 .head {
@@ -51,8 +54,8 @@
 .guide {
   position: absolute;
   top: -50px;
-  left: 100px;
-  width: auto;
+  left: -45px;
+  width: 19rem;
   height: auto;
   text-align: center;
   color: whitesmoke;
@@ -87,16 +90,30 @@
   content: "";
 }
 
-.character.eye[data-direction="forward"] {
+.character.moving {
+  animation: movingY 0.7s ease-in-out alternate infinite;
 }
 
-.character.eye[data-direction="backward"] {
+.character.moving[data-direction="left"] {
+  animation: movingX 0.3s ease-in-out alternate infinite;
 }
 
-.eye[data-direction="forward"] {
-  visibility: hidden;
+.character.moving[data-direction="right"] {
+  animation: movingX 0.3s ease-in-out alternate infinite;
 }
 
-.eye[data-direction="backward"] {
-  visibility: visible;
+.character[data-direction="forward"] {
+  transform: rotateY(0deg);
+}
+
+.character[data-direction="backward"] {
+  transform: rotateY(0deg);
+}
+
+.character[data-direction="left"] {
+  transform: rotateY(-8deg);
+}
+
+.character[data-direction="right"] {
+  transform: rotateY(8deg);
 }

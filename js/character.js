@@ -15,11 +15,22 @@ function Character(info) {
   this.mainElem.firstChild.style.borderBottom = `6rem solid ${info.color}`;
   document.querySelector(".stage").appendChild(this.mainElem);
 
+  this.mainElem.style.left = info.xPos + "%";
+
   //이전 스크롤 위치
   this.lastScrollPos = 0;
-
+  //캐릭터가 좌/우로 움직이는 거리
+  this.speed = info.speed;
+  this.direction;
+  //x좌표
+  this.xPos = info.xPos;
   //스크롤 상태 체크
   this.scrollState = false;
+  //좌우 이동 상태 체크
+  this.movingState = false;
+  //requestAnimationFrame의 return value를 저장할 변수
+  this.returnId;
+
   this.init();
 }
 
@@ -36,21 +47,23 @@ Character.prototype = {
         obj.mainElem.classList.add("moving");
       }
 
-      //scroll 멈춤 시, 1초 후 애니메이션 제거
+      //scroll 멈춤 시, 0.5초 후 애니메이션 제거
       obj.scrollState = setTimeout(function () {
         obj.scrollState = false;
         obj.mainElem.classList.remove("moving");
-      }, 1000);
+      }, 500);
 
       //guide 제어
       const pageYOffsetPer =
         pageYOffset / (document.body.offsetHeight - window.innerHeight);
       if (obj.lastScrollPos < pageYOffset) {
         //캐릭터 뒷면 -> forward
-        obj.mainElem.children[4].setAttribute("data-direction", "forward");
+        obj.mainElem.setAttribute("data-direction", "forward");
+        obj.mainElem.children[4].style.visibility = "hidden";
       } else if (obj.lastScrollPos > pageYOffset) {
         //캐릭터 정면 -> backward
-        obj.mainElem.children[4].setAttribute("data-direction", "backward");
+        obj.mainElem.setAttribute("data-direction", "backward");
+        obj.mainElem.children[4].style.visibility = "visible";
       }
       if (pageYOffsetPer > 0.31 && pageYOffsetPer <= 0.7) {
         // pageYOffsetPer > 0.31 -> main
@@ -76,5 +89,55 @@ Character.prototype = {
 
       obj.lastScrollPos = pageYOffset;
     }); //scroll event end
+
+    window.addEventListener("keydown", function (e) {
+      if (obj.movingState) return;
+      //ArrowLeft -> 37, ArrowRight -> 39
+      if (e.key === "ArrowLeft") {
+        obj.mainElem.children[4].style.visibility = "visible";
+        obj.direction = "left";
+        obj.mainElem.setAttribute("data-direction", "left");
+        obj.mainElem.classList.add("moving");
+        obj.move(obj);
+        obj.movingState = true;
+      } else if (e.key === "ArrowRight") {
+        obj.mainElem.children[4].style.visibility = "visible";
+        obj.direction = "right";
+        obj.mainElem.setAttribute("data-direction", "right");
+        obj.mainElem.classList.add("moving");
+        obj.move(obj);
+        obj.movingState = true;
+      }
+    }); //keydown end
+
+    window.addEventListener("keyup", function (e) {
+      obj.mainElem.classList.remove("moving");
+      cancelAnimationFrame(obj.returnId);
+      obj.movingState = false;
+    }); //keyup end
   }, //init end
+
+  move: function (obj) {
+    if (obj.direction == "left") {
+      obj.xPos -= obj.speed;
+    } else if (obj.direction == "right") {
+      obj.xPos += obj.speed;
+    }
+
+    //캐릭터 좌측 최대 이동거리
+    if (obj.xPos < 3) {
+      obj.xPos = 3;
+    }
+
+    //캐릭터 우측 최대 이동거리
+    if (obj.xPos > 80) {
+      obj.xPos = 80;
+    }
+
+    obj.mainElem.style.left = `${obj.xPos}%`;
+
+    obj.returnId = requestAnimationFrame(function () {
+      obj.move(obj);
+    });
+  },
 };
