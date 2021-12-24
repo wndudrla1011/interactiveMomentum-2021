@@ -2,6 +2,7 @@
   const stageElem = document.querySelector(".stage");
   const houseElem = document.querySelector(".house");
   const colors = ["#57c9f2", "#e80000", "#3809b6", "#29c92b", "#f76801"];
+  const mouseXY = { x: 0, y: 0 };
   let maxScrollValue;
 
   function reallocate() {
@@ -21,6 +22,13 @@
       speed: 0.3,
       color: colors[index],
     });
+  });
+
+  window.addEventListener("mousemove", function (e) {
+    mouseXY.x = -1 + (e.clientX / window.innerWidth) * 2;
+    mouseXY.y = 1 - (e.clientY / window.innerHeight) * 2;
+    stageElem.style.transform =
+      "rotateX(" + mouseXY.y * 5 + "deg) rotateY(" + mouseXY.x * 5 + "deg)";
   });
 
   window.addEventListener("resize", reallocate);
