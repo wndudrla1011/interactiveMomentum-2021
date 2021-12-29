@@ -46,3 +46,7 @@ body {
 .opacity {
   opacity: 0;
 }
+
+body.block {
+  overflow: hidden;
+}
