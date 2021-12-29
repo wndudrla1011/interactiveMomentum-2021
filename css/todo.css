@@ -1,9 +1,17 @@
-.todo-list__box {
+.todo-list__inputBox {
   display: inline-block;
   position: absolute;
   left: 30px;
   top: 100px;
   width: 20vw;
+  height: auto;
+  padding: 0px 10px;
+}
+
+.todo-list__view {
+  position: absolute;
+  left: 10%;
+  width: 80%;
   height: auto;
   padding: 0px 10px;
 }
@@ -17,7 +25,7 @@
 
 #todo-list__form h2 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 #todo-list__form input {
@@ -47,18 +55,19 @@
   justify-content: space-between;
   margin: 20px 30px;
   width: 100%;
-  border-bottom: 2.5px solid #b77f36;
+  border-bottom: 0.4rem solid #b77f36;
   background-color: transparent;
-  padding: 5px 0px;
+  padding: 1rem 0px;
 }
 
 #todo-list__form-ul span {
   font-weight: 600;
+  font-size: 2rem;
   background-color: transparent;
 }
 
 #todo-list__form-ul button {
   border-radius: 50%;
-  width: 30px;
+  width: 2rem;
   font-weight: 700;
 }

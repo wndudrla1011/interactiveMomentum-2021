@@ -16,6 +16,21 @@
   transform: rotateX(90deg);
 }
 
+.page-right {
+  width: 30vw;
+  height: 90vh;
+  left: 230vh;
+  top: -5vw;
+  border-radius: 20%;
+  transform: rotateY(-20deg) translateZ(100vw);
+  overflow: scroll;
+  -ms-overflow-style: none;
+}
+
+.page-right::-webkit-scrollbar {
+  display: none;
+}
+
 .page_front-login {
   transform: translateZ(70vw);
 }

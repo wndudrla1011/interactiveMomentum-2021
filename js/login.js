@@ -28,7 +28,7 @@
     // userName.innerText = username;
     hello.innerText = "Hello";
     userName.innerText = username;
-    span.innerText = "Manage Yours ▶ Main";
+    span.innerText = "Manage Yours Main 🔼";
     h2.innerText = `${username}'s To Do List!`;
     hello.classList.remove(HIDDEN_CLASSNAME);
     userName.classList.remove(HIDDEN_CLASSNAME);

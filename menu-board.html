@@ -12,9 +12,14 @@
       <div class="stage">
         <div class="house">
           <section class="page page-bottom"></section>
+          <section class="page page-right">
+            <div class="todo-list__view">
+              <ul id="todo-list__form-ul"></ul>
+            </div>
+          </section>
           <section class="page page_front-login">
             <!-- Login contents -->
-            <div class="todo-list__box">
+            <div class="todo-list__inputBox">
               <form id="todo-list__form">
                 <h2></h2>
                 <input
@@ -24,7 +29,6 @@
                   required
                 />
               </form>
-              <ul id="todo-list__form-ul"></ul>
             </div>
             <div class="ent-main">
               <div class="dish">
@@ -45,9 +49,7 @@
                 </form>
                 <div id="greetings"></div>
                 <div id="move-button" class="hidden"></div>
-                <a href="main.html"
-                  ><div id="move-botton__sub" class="hidden"></div
-                ></a>
+                <div id="move-botton__sub" class="hidden"></div>
               </div>
               <div id="quote">
                 <span></span>
@@ -57,7 +59,12 @@
           </section>
           <section class="page page_front-main">
             <div class="page-content">
-              <!-- contents -->
+              <div class="room"></div>
+              <div class="room"></div>
+              <div class="room"></div>
+              <div class="room"></div>
+              <div class="room"></div>
+              <div class="room"></div>
             </div>
           </section>
           <section class="page page_front-notepad">
@@ -73,6 +80,7 @@
   <script src="js/main-board.js"></script>
   <script src="js/character.js"></script>
   <script src="js/login.js"></script>
+  <script src="js/todo.js"></script>
   <script
     src="https://kit.fontawesome.com/f320190c34.js"
     crossorigin="anonymous"

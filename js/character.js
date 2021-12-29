@@ -65,22 +65,22 @@ Character.prototype = {
         obj.mainElem.setAttribute("data-direction", "backward");
         obj.mainElem.children[4].style.visibility = "visible";
       }
-      if (pageYOffsetPer > 0.31 && pageYOffsetPer <= 0.7) {
-        // pageYOffsetPer > 0.31 -> main
+      if (pageYOffsetPer > 0.27 && pageYOffsetPer <= 0.67) {
+        // pageYOffsetPer > 0.27 -> main
         obj.mainElem.children[2].innerText = "This is Main Page!";
         obj.mainElem.children[2].style.left = "-52px";
         obj.mainElem.children[3].style.left = "88px";
         obj.mainElem.children[3].style.top = "33px";
         obj.icon.setAttribute("class", "fas fa-home");
       }
-      // pageYOffsetPer > 0.7 -> notepad
-      else if (pageYOffsetPer > 0.7) {
+      // pageYOffsetPer > 0.67 -> notepad
+      else if (pageYOffsetPer > 0.67) {
         obj.mainElem.children[2].innerText = "This is My Notepad!";
         obj.mainElem.children[2].style.left = "-52px";
         obj.mainElem.children[3].style.left = "93px";
         obj.icon.setAttribute("class", "far fa-sticky-note");
       }
-      // pageYOffsetPer <= 0.31 -> login
+      // pageYOffsetPer <= 0.27 -> login
       else {
         obj.mainElem.children[2].innerText = "This is Login Page!";
         obj.mainElem.children[2].style.left = "-52px";

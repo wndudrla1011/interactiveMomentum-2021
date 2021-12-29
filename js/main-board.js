@@ -58,12 +58,12 @@
     houseElem.style.transform = "translateZ(" + zRange + "vw)";
 
     if (activate) {
-      if (scrollValue > 0.31) {
+      if (scrollValue > 0.27) {
         open(door1);
       } else {
         close(door1);
       }
-      if (scrollValue > 0.7) {
+      if (scrollValue > 0.67) {
         open(door2);
       } else {
         close(door2);
@@ -84,7 +84,7 @@
     mouseXY.x = -1 + (e.clientX / window.innerWidth) * 2;
     mouseXY.y = 1 - (e.clientY / window.innerHeight) * 2;
     stageElem.style.transform =
-      "rotateX(" + mouseXY.y * 10 + "deg) rotateY(" + mouseXY.x * 5 + "deg)";
+      "rotateX(" + mouseXY.y * 10 + "deg) rotateY(" + mouseXY.x * 1s0 + "deg)";
   });
 
   window.addEventListener("resize", reallocate);
