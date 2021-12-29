@@ -9,7 +9,7 @@
   //최대 스크롤 크기
   let maxScrollValue;
   //submit 상태인 지 체크
-  let activate;
+  let activate = false;
   //초기 스크롤 위치 값
   let initialScroll;
   //setInterval return value
@@ -30,15 +30,17 @@
   }
 
   //0.5초마다 초기 스크롤 위치 계산
-  intervalId = setInterval(function () {
-    initialScroll = pageYOffset / maxScrollValue;
-    if (initialScroll > 0.2) {
-      if (savedUsername === null) {
-        document.body.classList.add("block");
-        activate = false;
+  if (!activate) {
+    intervalId = setInterval(function () {
+      initialScroll = pageYOffset / maxScrollValue;
+      if (initialScroll > 0.2) {
+        if (savedUsername === null) {
+          document.body.classList.add("block");
+          activate = false;
+        }
       }
-    }
-  }, 500);
+    }, 500);
+  }
 
   //username 제출 시, setInterval을 중지시키고 scroll block 해제
   loginForm.addEventListener("submit", function () {
@@ -48,6 +50,9 @@
   });
 
   window.addEventListener("scroll", function (e) {
+    if (savedUsername !== null) {
+      activate = true;
+    }
     const scrollValue = pageYOffset / maxScrollValue;
     const zRange = scrollValue * 430 - 200;
     houseElem.style.transform = "translateZ(" + zRange + "vw)";
