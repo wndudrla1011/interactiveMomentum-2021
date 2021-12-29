@@ -3,6 +3,8 @@
 /* css */
 @import "css/character.css";
 @import "css/page.css";
+@import "css/login.css";
+@import "css/todo.css";
 
 body {
   height: 500vw;
@@ -35,4 +37,12 @@ body {
   height: 100vh;
   transform: translateZ(-200vw);
   transform-style: preserve-3d;
+}
+
+.hidden {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
 }

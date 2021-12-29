@@ -13,8 +13,46 @@
         <div class="house">
           <section class="page page-bottom"></section>
           <section class="page page_front-login">
-            <div class="page-content">
-              <!-- contents -->
+            <!-- Login contents -->
+            <div class="todo-list__box">
+              <form id="todo-list__form">
+                <h2></h2>
+                <input
+                  class="todo"
+                  type="text"
+                  placeholder="To do List"
+                  required
+                />
+              </form>
+              <ul id="todo-list__form-ul"></ul>
+            </div>
+            <div class="ent-main">
+              <div class="dish">
+                <div class="circle">
+                  <h2 id="clock">00:00:00</h2>
+                </div>
+              </div>
+              <div class="login-box">
+                <form class="hidden" id="login-form">
+                  <input
+                    required
+                    maxlength="15"
+                    type="text"
+                    placeholder="What is your name?"
+                    autofocus
+                  />
+                  <div class="clone"></div>
+                </form>
+                <div id="greetings"></div>
+                <div id="move-button" class="hidden"></div>
+                <a href="main.html"
+                  ><div id="move-botton__sub" class="hidden"></div
+                ></a>
+              </div>
+              <div id="quote">
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </section>
           <section class="page page_front-main">
@@ -34,6 +72,7 @@
   </body>
   <script src="js/main-board.js"></script>
   <script src="js/character.js"></script>
+  <script src="js/login.js"></script>
   <script
     src="https://kit.fontawesome.com/f320190c34.js"
     crossorigin="anonymous"

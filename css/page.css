@@ -4,6 +4,9 @@
   top: 0;
   width: 100vw;
   height: 100vh;
+  transform-style: preserve-3d;
+  transition: 1s;
+  transform-origin: center;
   background-image: url("https://post-phinf.pstatic.net/MjAxODEyMjBfMTYy/MDAxNTQ1Mjg2MTY2MTg4.EMsVh-XLO8k1jOkWNcZrrjXfhTlKX3Zig2yUYpwQozMg.AKIGpGLH9oHUoInx36ZAesEA6sXuzLt-aS6sDJ2Nfncg.JPEG/96f46544fe3de03b2eafe36ce1c35c7f.jpg?type=w1200");
 }
 
@@ -17,8 +20,16 @@
   transform: translateZ(70vw);
 }
 
+.page_front-login.opened {
+  transform: perspective(800px) translateY(-700px);
+}
+
 .page_front-main {
   transform: translateZ(-100vw);
+}
+
+.page_front-main.opened {
+  transform: translateZ(-150vw) perspective(800px) translateY(-700px);
 }
 
 .page_front-notepad {
