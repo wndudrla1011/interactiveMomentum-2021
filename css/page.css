@@ -31,6 +31,21 @@
   display: none;
 }
 
+.page-left {
+  width: 30vw;
+  height: 90vh;
+  left: 30vh;
+  top: -5vw;
+  border-radius: 20%;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  transform: rotateY(20deg) translateZ(-80vw);
+}
+
+.page-left::-webkit-scrollbar {
+  display: none;
+}
+
 .page_front-login {
   transform: translateZ(70vw);
 }

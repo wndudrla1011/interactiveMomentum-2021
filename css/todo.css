@@ -60,6 +60,10 @@
   padding: 1rem 0px;
 }
 
+#todo-list__form-ul li:hover {
+  background-color: goldenrod;
+}
+
 #todo-list__form-ul span {
   font-weight: 600;
   font-size: 2rem;

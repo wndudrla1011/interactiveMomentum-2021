@@ -1,0 +1,305 @@
+.bottom-screen {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#foodImage {
+  background-color: rgb(230, 228, 228);
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 33%;
+  margin-right: 30px;
+  border-radius: 20px;
+  position: relative;
+}
+
+#foodImage img {
+  width: 80%;
+  height: 200px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+#foodImage span {
+  display: block;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#button-changeImage {
+  background: linear-gradient(0.25turn, #b8b9b9, #999b99, #727272);
+  width: 80%;
+  height: 25%;
+  border-radius: 20px;
+  border: none;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button-changeImage div {
+  font-weight: 700;
+  font-size: 23px;
+}
+
+#clicked-button {
+  background: linear-gradient(0.25turn, #b8b9b9, #999b99, #727272);
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#clicked-button div {
+  font-weight: 700;
+  font-size: 23px;
+}
+
+.smart-watch {
+  background-color: rgb(230, 228, 228);
+  opacity: 0.9;
+  height: 300px;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 30px;
+  border-radius: 20px;
+}
+
+.smart-watch i {
+  display: flex;
+  justify-content: center;
+}
+
+.condition-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  border-radius: 20px;
+  background: linear-gradient(0.25turn, #b8b9b9, #999b99, #727272);
+}
+
+.condition-main h2 {
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#weather-main {
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 90%;
+  position: relative;
+}
+
+#weather-main i {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+#weather-main span {
+  font-size: 30px;
+}
+
+#city {
+  position: absolute;
+  bottom: 230px;
+  left: 10px;
+}
+
+.music-player {
+  background-color: rgb(230, 228, 228);
+  opacity: 0.9;
+  height: 300px;
+  width: 33%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-player .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  font-size: 35px;
+}
+
+.music-player audio {
+  margin-bottom: 30px;
+}
+
+audio::-webkit-media-controls-panel {
+  background: linear-gradient(0.25turn, #b8b9b9, #999b99, #727272);
+  color: black;
+  font-weight: 600;
+}
+
+.tooltip-image {
+  position: relative;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.tooltip-image .tooltip-image__text {
+  visibility: hidden;
+  width: 210px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  line-height: 30px;
+}
+
+.tooltip-image:hover .tooltip-image__text {
+  visibility: visible;
+}
+
+.tooltip-image .tooltip-image__text::after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.tooltip-image .tooltip-image__left {
+  top: -40px;
+  right: 205%;
+}
+
+.tooltip-image .tooltip-image__left::after {
+  top: 100%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent black;
+  transform: rotateZ(35deg);
+}
+
+.tooltip-smart-watch {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+  margin-right: 8px;
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.tooltip-smart-watch .tooltiptext-smart-watch {
+  visibility: hidden;
+  width: 210px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  line-height: 30px;
+}
+
+.tooltip-smart-watch:hover .tooltiptext-smart-watch {
+  visibility: visible;
+}
+
+.tooltip-smart-watch .tooltiptext-smart-watch::after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.tooltip-smart-watch .tooltip-left__smart-watch {
+  top: -40px;
+  right: 10%;
+}
+
+.tooltip-smart-watch .tooltip-left__smart-watch::after {
+  top: 100%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent black;
+  transform: rotateZ(35deg);
+}
+
+.tooltip-music {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 8px;
+  font-size: 18px;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.tooltip-music .tooltiptext-music {
+  visibility: hidden;
+  width: 210px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  line-height: 30px;
+}
+
+.tooltip-music:hover .tooltiptext-music {
+  visibility: visible;
+}
+
+.tooltip-music .tooltiptext-music::after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.tooltip-music .tooltip-right__music {
+  top: -35px;
+  left: 102%;
+}
+
+.tooltip-music .tooltip-right__music::after {
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-color: transparent black transparent transparent;
+}

@@ -1,1 +1,63 @@
+@keyframes todoAni {
+  100% {
+    transform: translateZ(50px) scale(1.2);
+  }
+}
 
+.room {
+  position: absolute;
+  width: 8vw;
+  height: 13vw;
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  border-top: 5rem solid black;
+  border-radius: 60%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.room:hover {
+  animation: todoAni 1s ease-in-out forwards;
+}
+
+.register-room {
+  left: 10%;
+  top: 20%;
+}
+
+.expired-room {
+  left: 40%;
+  top: 20%;
+}
+
+.remaining-room {
+  left: 70%;
+  top: 20%;
+}
+
+.photo-room {
+  left: 10%;
+  top: 60%;
+}
+
+.quotes-room {
+  left: 40%;
+  top: 60%;
+}
+
+.music-room {
+  left: 70%;
+  top: 60%;
+}
+
+.room-text {
+  display: inline-block;
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 3rem;
+}

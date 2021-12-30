@@ -84,7 +84,7 @@
     mouseXY.x = -1 + (e.clientX / window.innerWidth) * 2;
     mouseXY.y = 1 - (e.clientY / window.innerHeight) * 2;
     stageElem.style.transform =
-      "rotateX(" + mouseXY.y * 10 + "deg) rotateY(" + mouseXY.x * 1s0 + "deg)";
+      "rotateX(" + mouseXY.y * 10 + "deg) rotateY(" + mouseXY.x * 10 + "deg)";
   });
 
   window.addEventListener("resize", reallocate);

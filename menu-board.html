@@ -17,6 +17,98 @@
               <ul id="todo-list__form-ul"></ul>
             </div>
           </section>
+          <section class="page page-left">
+            <div class="todo-box">
+              <form id="todo-form">
+                <div class="todo-form__top">
+                  <input
+                    class="expired"
+                    type="text"
+                    placeholder="EXPIRATION DATE"
+                    required
+                  />
+                  <input
+                    class="items"
+                    type="text"
+                    placeholder="ITEM"
+                    required
+                  />
+                </div>
+                <input class="save" type="submit" value="SAVE !" />
+              </form>
+              <ul id="todo-list"></ul>
+            </div>
+            <div class="expired-text">
+              <div class="tooltip">
+                💭
+                <span class="tooltiptext tooltip-top">
+                  <span>It's past the expiration date!</span>
+                </span>
+              </div>
+            </div>
+            <div class="result-exp">
+              <div class="tooltip">
+                💭
+                <span class="tooltiptext tooltip-result-exp">
+                  <p>
+                    Exp date 21 ~ 30 days : green color <br />
+                    Exp date 11 ~ 20 days : blue color <br />
+                    Exp date 6 ~ 10 days : orange color <br />
+                    Exp date Less than 5 days : red color <br />
+                  </p>
+                </span>
+              </div>
+            </div>
+            <div class="result-exp__empty hidden">
+              <div class="tooltip">
+                💭
+                <span class="tooltiptext tooltip-right">
+                  <p>
+                    유통기한(exp.date) 21 ~ 30일 : green color <br />
+                    유통기한(exp.date) 11 ~ 20일 : blue color <br />
+                    유통기한(exp.date) 6 ~ 10일 : orange color <br />
+                    유통기한(exp.date) 5일 이하 : red color <br />
+                  </p>
+                </span>
+              </div>
+            </div>
+            <div class="foodImage">
+              <button id="clicked-button" class="opacity">
+                <div class="tooltip-image">
+                  C
+                  <span class="tooltip-image__text tooltip-image__left">
+                    <p>Change Image</p>
+                  </span>
+                </div>
+              </button>
+              <button id="button-changeImage">
+                <div>What's good today?</div>
+              </button>
+            </div>
+            <div class="quote">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="music-player">
+              <div class="tooltip-music">
+                💭
+                <span class="tooltiptext-music tooltip-right__music">
+                  <p>
+                    Background Music <br />
+                    Basic Volume : 50% <br />
+                    Option : loop
+                  </p>
+                </span>
+              </div>
+              <span class="title">Music Player</span>
+              <audio
+                class="background-music"
+                autoplay
+                controls
+                src="music/bensound-ukulele.mp3"
+              ></audio>
+            </div>
+          </section>
           <section class="page page_front-login">
             <!-- Login contents -->
             <div class="todo-list__inputBox">
@@ -58,19 +150,29 @@
             </div>
           </section>
           <section class="page page_front-main">
-            <div class="page-content">
-              <div class="room"></div>
-              <div class="room"></div>
-              <div class="room"></div>
-              <div class="room"></div>
-              <div class="room"></div>
-              <div class="room"></div>
+            <div class="room register-room">
+              <span class="room-text register-room__name"
+                >Registration Box</span
+              >
+            </div>
+            <div class="room expired-room">
+              <span class="room-text expired-room__name">Expired Items</span>
+            </div>
+            <div class="room remaining-room">
+              <span class="room-text remaining-room__name">Remaining Date</span>
+            </div>
+            <div class="room photo-room">
+              <span class="room-text photo-room__name">Photo Zone</span>
+            </div>
+            <div class="room quotes-room">
+              <span class="room-text quotes-room__name">Quotes</span>
+            </div>
+            <div class="room music-room">
+              <span class="room-text music-room__name">Background Music</span>
             </div>
           </section>
           <section class="page page_front-notepad">
-            <div class="page-content">
-              <!-- contents -->
-            </div>
+            <!-- contents -->
           </section>
         </div>
         <!-- character position -->
@@ -81,6 +183,11 @@
   <script src="js/character.js"></script>
   <script src="js/login.js"></script>
   <script src="js/todo.js"></script>
+  <script src="js/room.js"></script>
+  <script src="js/exp.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/foodImage.js"></script>
+
   <script
     src="https://kit.fontawesome.com/f320190c34.js"
     crossorigin="anonymous"
