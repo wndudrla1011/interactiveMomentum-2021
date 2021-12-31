@@ -73,11 +73,14 @@
 
   stageElem.addEventListener("click", function (e) {
     let index = Math.floor(Math.random() * 5);
-    new Character({
-      xPos: (e.clientX / window.innerWidth) * 100,
-      speed: 0.3,
-      color: colors[index],
-    });
+    const chCount = document.getElementsByClassName("character").length;
+    if (chCount + 1 <= 5) {
+      new Character({
+        xPos: (e.clientX / window.innerWidth) * 100,
+        speed: Math.random() * 0.3 + 0.1,
+        color: colors[index],
+      });
+    }
   });
 
   window.addEventListener("mousemove", function (e) {

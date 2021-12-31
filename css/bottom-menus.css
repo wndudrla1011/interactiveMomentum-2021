@@ -160,9 +160,6 @@
   font-weight: 600;
 }
 
-.music-player audio {
-}
-
 audio::-webkit-media-controls-panel {
   background: linear-gradient(0.25turn, #b8b9b9, #999b99, #727272);
   color: black;
