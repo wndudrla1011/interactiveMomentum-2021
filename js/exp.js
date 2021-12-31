@@ -112,6 +112,17 @@ function checkExp(newTodo) {
   let dateNumber = parseInt(date);
 
   if (todayYear < yearNumber) {
+    if (monthNumber + 12 - todayMonth == 1) {
+      //유통기한 1달 이내 -> 올해 12월 - 다음해 1월
+      if (date <= todayDate) {
+        let d_day;
+        date = dateNumber + 30;
+        d_day = date - todayDate;
+        changeColorExp(d_day, newTodo);
+      } else {
+        //유통기한 1달 이상
+      }
+    }
   } else if (todayYear == yearNumber) {
     if (todayMonth == month) {
       //이번 달
@@ -122,10 +133,12 @@ function checkExp(newTodo) {
         expiredText.appendChild(span);
         span.innerText = `${item}의 유통기한이 지났어요!`;
       } else if (date == todayDate) {
+        //유통기한 당일
         const span = document.createElement("span");
         expiredText.appendChild(span);
         span.innerText = `${item}의 유통기한이 오늘까지에요!`;
       } else {
+        //유통기한 1달 이내
         let d_day;
         d_day = date - todayDate;
         changeColorExp(d_day, newTodo);
@@ -147,6 +160,8 @@ function checkExp(newTodo) {
         } else {
           //유통기한 1달 이상
         }
+      } else {
+        //유통기한 1달 이상
       }
     }
   } else {

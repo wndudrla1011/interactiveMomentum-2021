@@ -18,7 +18,7 @@ const title = [
   "모듬회",
   "양꼬치",
 ];
-const foodImage = document.querySelector("#foodImage");
+const foodImage = document.querySelector(".foodImage");
 const buttonChangeImage = document.querySelector("#button-changeImage");
 const clickedButton = document.querySelector("#clicked-button");
 const random = Math.floor(Math.random() * images.length);
