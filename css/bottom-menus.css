@@ -139,10 +139,11 @@
 }
 
 .music-player {
-  background-color: rgb(230, 228, 228);
+  background-color: #f6fba2;
+  background-image: linear-gradient(315deg, #f6fba2 0%, #20ded3 74%);
   opacity: 0.9;
-  height: 300px;
-  width: 33%;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -155,17 +156,109 @@
   justify-content: center;
   align-items: center;
   height: 80%;
-  font-size: 35px;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .music-player audio {
-  margin-bottom: 30px;
 }
 
 audio::-webkit-media-controls-panel {
   background: linear-gradient(0.25turn, #b8b9b9, #999b99, #727272);
   color: black;
   font-weight: 600;
+}
+
+.random-music {
+  background: linear-gradient(0.25turn, #32e2e2, #0983d4, #0846ca);
+  width: 13%;
+  height: 10%;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.random-music span {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.animation-group__column {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10%;
+}
+
+@keyframes scaleSticks {
+  0% {
+    transform: none;
+  }
+  10% {
+    transform: scaleY(1.1) scaleX(1.1);
+  }
+  20% {
+    transform: scaleY(1.25) scaleX(1.25);
+  }
+  30% {
+    transform: scaleY(1.5) scaleX(1.5);
+  }
+  40% {
+    transform: scaleY(1.75) scaleX(1.75);
+  }
+  50% {
+    transform: scaleY(2) scaleX(2);
+  }
+  60% {
+    transform: scaleY(1.75) scaleX(1.75);
+  }
+  70% {
+    transform: scaleY(1.5) scaleX(1.5);
+  }
+  80% {
+    transform: scaleY(1.25) scaleX(1.25);
+  }
+  90% {
+    transform: scaleY(1.1) scaleX(1.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.animation-gruop__stick {
+  background-color: white;
+  width: 2.5vw;
+  height: 6vw;
+  display: flex;
+  margin: 0px 3%;
+}
+
+.play {
+  animation: scaleSticks 1s linear infinite;
+}
+
+.stick-two {
+  animation-delay: 0.2s;
+}
+
+.stick-three {
+  animation-delay: 0.4s;
+}
+
+.stick-four {
+  animation-delay: 0.6s;
+}
+
+.stick-five {
+  animation-delay: 0.8s;
+}
+
+.background-music {
+  height: 15%;
+  margin-bottom: 13%;
 }
 
 .tooltip-image {
@@ -267,9 +360,9 @@ audio::-webkit-media-controls-panel {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
-  margin-right: 8px;
-  font-size: 18px;
+  margin-top: 10%;
+  margin-right: 8%;
+  font-size: 1.3rem;
   width: 100%;
   cursor: pointer;
   opacity: 0.7;
@@ -278,11 +371,11 @@ audio::-webkit-media-controls-panel {
 
 .tooltip-music .tooltiptext-music {
   visibility: hidden;
-  width: 210px;
+  width: 15rem;
   background-color: black;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 6%;
   padding: 5px 10px;
   position: absolute;
   line-height: 30px;
@@ -300,8 +393,8 @@ audio::-webkit-media-controls-panel {
 }
 
 .tooltip-music .tooltip-right__music {
-  top: -35px;
-  left: 102%;
+  top: 10%;
+  left: 10%;
 }
 
 .tooltip-music .tooltip-right__music::after {
