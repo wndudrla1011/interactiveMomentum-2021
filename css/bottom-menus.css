@@ -175,6 +175,7 @@ audio::-webkit-media-controls-panel {
   height: 10%;
   border-radius: 50%;
   position: absolute;
+  margin-bottom: 13%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,30 +231,42 @@ audio::-webkit-media-controls-panel {
 
 .animation-gruop__stick {
   background-color: white;
-  width: 2.5vw;
-  height: 6vw;
+  width: 1.5vw;
+  height: 7vw;
   display: flex;
-  margin: 0px 3%;
+  margin: 0px 2.5%;
 }
 
 .play {
-  animation: scaleSticks 1s linear infinite;
+  animation: scaleSticks 1.4s linear infinite;
 }
 
 .stick-two {
-  animation-delay: 0.2s;
+  animation-delay: 0.15s;
 }
 
 .stick-three {
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
 }
 
 .stick-four {
-  animation-delay: 0.6s;
+  animation-delay: 0.45s;
 }
 
 .stick-five {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
+}
+
+.stick-six {
+  animation-delay: 0.75s;
+}
+
+.stick-seven {
+  animation-delay: 1s;
+}
+
+.stick-eight {
+  animation-delay: 1.25s;
 }
 
 .background-music {
