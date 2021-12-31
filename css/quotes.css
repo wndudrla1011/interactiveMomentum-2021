@@ -1,9 +1,11 @@
-#quote {
+.quote {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 20px;
   color: white;
-  line-height: 40px;
-  font-size: 20px;
+  margin-top: 40%;
+  line-height: 50px;
+  font-size: 1.7rem;
 }
