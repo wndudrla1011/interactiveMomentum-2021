@@ -14,20 +14,21 @@
   const quotesRoom = document.querySelector(".quotes-room");
   const musicRoom = document.querySelector(".music-room");
 
-  const HIDDEN_NAME = "hidden";
-
   regRoom.addEventListener("click", function () {
     page.innerHTML = "";
+    page.style.overflow = "scroll";
     page.appendChild(todoBox);
   });
 
   expRoom.addEventListener("click", function () {
     page.innerHTML = "";
+    page.style.overflow = "scroll";
     page.appendChild(expiredText);
   });
 
   remainRoom.addEventListener("click", function () {
     page.innerHTML = "";
+    page.style.overflow = "scroll";
     page.appendChild(resultExp);
   });
 

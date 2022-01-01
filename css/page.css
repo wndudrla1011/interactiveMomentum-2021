@@ -37,7 +37,7 @@
   left: 30vh;
   top: -5vw;
   border-radius: 20%;
-  overflow: scroll;
+  overflow: hidden;
   -ms-overflow-style: none;
   transform: rotateY(20deg) translateZ(-80vw);
 }

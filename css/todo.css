@@ -1,8 +1,8 @@
 .todo-list__inputBox {
   display: inline-block;
   position: absolute;
-  left: 30px;
-  top: 100px;
+  left: 3%;
+  top: 20%;
   width: 20vw;
   height: auto;
   padding: 0px 10px;
@@ -30,8 +30,8 @@
 
 #todo-list__form input {
   margin-top: 20px;
-  width: 250px;
-  height: 30px;
+  width: 20vw;
+  height: 2vw;
   background-color: transparent;
 }
 
@@ -47,7 +47,7 @@
 #todo-list__form-ul {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 10%;
 }
 
 #todo-list__form-ul li {

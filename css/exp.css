@@ -31,22 +31,22 @@
 
 .expired,
 .items {
-  width: 150px;
-  height: 40px;
+  width: 3vw;
+  height: 3vw;
   background-color: transparent;
-  margin-left: 10px;
+  margin-left: 2%;
   text-align: center;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid black;
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 .save {
   width: 80%;
   height: 2.5rem;
-  margin-top: 20px;
+  margin: 5% 0px;
   background-color: white;
   border: none;
   opacity: 0.9;
@@ -70,6 +70,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-left: 8%;
 }
 
 #todo-list button {
@@ -79,14 +80,14 @@
 }
 
 #todo-list li {
-  margin-top: 10px;
+  margin-top: 7%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #todo-list span {
-  margin: 0px 20px;
+  margin: 0px 10px;
   font-size: 1.5rem;
 }
 
@@ -131,18 +132,6 @@
   display: none;
 }
 
-.result-exp__empty {
-  background-color: rgb(230, 228, 228);
-  opacity: 0.9;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  width: 33%;
-  align-items: center;
-  font-size: 20px;
-  border-radius: 20px;
-}
-
 .result-exp span {
   margin-top: 8%;
   font-weight: 600;
@@ -185,6 +174,7 @@
   border-width: 5px;
 }
 
+/* expired text tooltip box */
 .tooltip .tooltip-top {
   top: 1500%;
   left: 45%;
@@ -198,6 +188,7 @@
   transform: rotateZ(30deg);
 }
 
+/* exp result tooltip box */
 .tooltip .tooltip-result-exp {
   top: 1000%;
   left: 45%;
@@ -209,6 +200,7 @@
   margin-top: -5px;
   border-color: transparent black transparent transparent;
 }
+
 /* exp save box tooltip */
 .tooltip-save__box {
   position: absolute;
