@@ -1,7 +1,7 @@
 .smart-watch {
   background-color: rgb(230, 228, 228);
-  opacity: 0.9;
-  width: 17%;
+  opacity: 0.8;
+  width: 23%;
   height: 30%;
   position: fixed;
   top: 5%;
@@ -63,7 +63,7 @@
 }
 
 .background-music {
-  width: 100%;
+  width: 90%;
   height: 15%;
 }
 
