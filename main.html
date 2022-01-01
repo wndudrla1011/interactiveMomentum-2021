@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Menu Page</title>
+    <title>Welcome! Interactive World</title>
   </head>
   <body>
     <div class="world">
@@ -97,6 +97,7 @@
                   </p>
                 </span>
               </div>
+              <span class="music-title opacity">Ukulele.mp3 ~ 🎵</span>
               <span class="title">Music Player</span>
               <div class="random-music">
                 <span>Next</span>
@@ -111,12 +112,6 @@
                 <div class="animation-gruop__stick stick-seven"></div>
                 <div class="animation-gruop__stick stick-eight"></div>
               </div>
-              <audio
-                class="background-music"
-                autoplay
-                controls
-                src="music/music1.mp3"
-              ></audio>
             </div>
           </section>
           <section class="page page_front-login">
@@ -182,6 +177,30 @@
           </section>
         </div>
         <!-- character position -->
+      </div>
+      <!-- smart watch -->
+      <div class="smart-watch">
+        <div class="tooltip-smart-watch">
+          💭
+          <span class="tooltiptext-smart-watch tooltip-left__smart-watch">
+            <span>Weather & Clock</span>
+          </span>
+        </div>
+        <div class="condition-main">
+          <div class="condition-sub-main">
+            <h2 id="clock">00:00:00</h2>
+          </div>
+        </div>
+        <div id="weather-main">
+          <span></span>
+          <span id="city"></span>
+        </div>
+        <audio
+          class="background-music"
+          autoplay
+          controls
+          src="music/Ukulele.mp3"
+        ></audio>
       </div>
     </div>
   </body>
