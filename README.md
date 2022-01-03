@@ -6,7 +6,4 @@
 ✔ Notepad function
 ✔ CSS 3D
 ✔ Upgraded element for Momentum 2021
-
-- Random music
-- Added BGM
-- Notepad
+✔ Random music
