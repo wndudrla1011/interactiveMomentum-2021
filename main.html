@@ -180,8 +180,29 @@
             </div>
           </section>
           <section class="page page_front-notepad">
-            <!-- contents -->
+            <!-- notepad contents -->
+            <ul class="note-list"></ul>
           </section>
+          <div class="inputBox tooltip-notepad">
+            <textarea
+              name="noteBox"
+              id="noteBox"
+              placeholder="Input your note!"
+              cols="70"
+              rows="10"
+            ></textarea>
+            <span class="tooltiptext-notepad tooltip-right__notepad">
+              <p>
+                This is the notebook box.<br />
+                Enter the content and click the Plus icon.<br />
+                Click the pencil icon to modify the note.<br />
+                Click the trash can icon to delete it.
+              </p>
+            </span>
+            <div class="create">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
         </div>
         <!-- character position -->
       </div>
@@ -216,6 +237,7 @@
   </body>
   <script src="js/main-board.js"></script>
   <script src="js/character.js"></script>
+  <script src="js/notepad.js"></script>
   <script src="js/login.js"></script>
   <script src="js/todo.js"></script>
   <script src="js/room.js"></script>
@@ -224,7 +246,7 @@
   <script src="js/foodImage.js"></script>
   <script src="js/music.js"></script>
   <script src="js/clock.js"></script>
-  <script src="js/weather-main.js"></script>
+  <!-- <script src="js/weather-main.js"></script> -->
 
   <script
     src="https://kit.fontawesome.com/f320190c34.js"

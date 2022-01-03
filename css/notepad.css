@@ -1,0 +1,123 @@
+.inputBox {
+  display: flex;
+  position: fixed;
+  top: -18%;
+  left: 40%;
+  transform: translateZ(-210vw);
+}
+
+.create {
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  background-color: transparent;
+  top: 2%;
+  right: 24.5%;
+  cursor: pointer;
+}
+
+.create i {
+  color: black;
+  font-size: 1.5rem;
+}
+
+textarea {
+  border-radius: 10px;
+  padding-top: 3%;
+  font-size: 1.2rem;
+}
+
+textarea::placeholder {
+  font-weight: 800;
+  color: black;
+  font-size: 2rem;
+}
+
+.note-list {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  flex-wrap: wrap;
+  margin: 5% 5%;
+}
+
+.note-list::-webkit-scrollbar {
+  display: none;
+}
+
+.note-list li {
+  position: relative;
+  margin: 1.8% 2%;
+}
+
+.note-list textarea {
+  width: 18vw;
+  height: 18vw;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 10%;
+  padding-left: 7%;
+  padding-top: 17%;
+}
+
+.note-list span {
+  font-size: 1.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.7%;
+}
+
+.delete {
+  right: 20%;
+  cursor: pointer;
+}
+
+.modify {
+  right: 2%;
+  cursor: pointer;
+}
+
+.tooltip-notepad {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.tooltip-notepad .tooltiptext-notepad {
+  visibility: hidden;
+  width: 45rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6%;
+  padding: 5px 10px;
+  position: absolute;
+  line-height: 30px;
+  font-size: 1.7rem;
+}
+
+.tooltip-notepad:hover .tooltiptext-notepad {
+  visibility: visible;
+}
+
+.tooltip-notepad .tooltiptext-notepad::after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.tooltip-notepad .tooltip-right__notepad {
+  top: 30%;
+  left: -20%;
+}
+
+.tooltip-notepad .tooltip-right__notepad::after {
+  top: 50%;
+  right: -1.5%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent black;
+}

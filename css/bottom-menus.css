@@ -220,7 +220,7 @@ audio::-webkit-media-controls-panel {
 
 .tooltip-image .tooltip-image__text {
   visibility: hidden;
-  width: 210px;
+  width: 15rem;
   background-color: black;
   color: #fff;
   text-align: center;
