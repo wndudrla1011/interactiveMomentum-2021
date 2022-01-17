@@ -42,7 +42,7 @@ Character.prototype = {
       //setTimeout을 멈춤
       clearTimeout(obj.scrollState);
 
-      //마지막 setTimeout 값이 들어오면서 1번 수행
+      //setTimeout 값이 들어오므로 1번 수행
       if (!obj.scrollState) {
         obj.mainElem.classList.add("moving");
       }
